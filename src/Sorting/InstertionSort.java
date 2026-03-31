@@ -12,7 +12,6 @@ public class InstertionSort {
                 i--;
             }
             arr[i + 1] = key;
-            System.out.println(Arrays.toString(arr));
         }
         return arr;
     }
