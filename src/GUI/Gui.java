@@ -30,13 +30,14 @@ public class Gui {
         frame = new JFrame(title);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(width, height);
-        frame.setVisible(true);
 
         panel = new JPanel();
         panel.setOpaque(true);
         panel.setBackground(Color.DARK_GRAY);
 
         JLabel arrayLabel = new JLabel(Arrays.toString(arr));
+        arrayLabel.setForeground(Color.WHITE);
+        arrayLabel.setFont(new Font("Arial", Font.PLAIN, 30));
         panel.add(arrayLabel);
 
         ArrayPanel arrayPanel = new ArrayPanel();
