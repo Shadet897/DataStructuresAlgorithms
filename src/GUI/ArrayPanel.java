@@ -31,7 +31,8 @@ public class ArrayPanel extends JPanel {
         this.arr = arr;
 
         largestIndex = findLargestIndex();
-        setOpaque(false);
+        setOpaque(true);
+        setBackground(Color.DARK_GRAY.darker());
         repaint();
     }
 

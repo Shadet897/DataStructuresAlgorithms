@@ -38,13 +38,19 @@ public class Gui {
         JLabel arrayLabel = new JLabel(Arrays.toString(arr));
         arrayLabel.setForeground(Color.WHITE);
         arrayLabel.setFont(new Font("Arial", Font.PLAIN, 30));
-        panel.add(arrayLabel);
+
+
+        JPanel midPanel = new JPanel();
+        midPanel.setOpaque(true);
+        midPanel.setBackground(Color.DARK_GRAY.darker());
 
         ArrayPanel arrayPanel = new ArrayPanel();
         arrayPanel.setArray(arr);
-        panel.add(arrayPanel);
 
-        frame.add(panel);
+        panel.add(arrayLabel);
+        midPanel.add(arrayPanel);
+        frame.add(panel, BorderLayout.PAGE_START);
+        frame.add(midPanel, BorderLayout.CENTER);
     }
 
     public void show(){
